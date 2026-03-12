@@ -1,3 +1,46 @@
 {
-  "tests": []
+  "tests": [
+    {
+      "name": "Conversions",
+      "id": "conv",
+      "command": "pytest -q tests/test_answers.py::test_conversions",
+      "timeout": 20,
+      "max_score": 12
+    },
+    {
+      "name": "Addition",
+      "id": "add",
+      "command": "pytest -q tests/test_answers.py::test_addition",
+      "timeout": 20,
+      "max_score": 3
+    },
+    {
+      "name": "Subtraction",
+      "id": "sub",
+      "command": "pytest -q tests/test_answers.py::test_subtraction",
+      "timeout": 20,
+      "max_score": 3
+    },
+    {
+      "name": "Twos Complement",
+      "id": "two",
+      "command": "pytest -q tests/test_answers.py::test_twos",
+      "timeout": 20,
+      "max_score": 3
+    },
+    {
+      "name": "Fixed Point",
+      "id": "fx",
+      "command": "pytest -q tests/test_answers.py::test_fixed",
+      "timeout": 20,
+      "max_score": 3
+    },
+    {
+      "name": "Limits",
+      "id": "lim",
+      "command": "pytest -q tests/test_answers.py::test_limits",
+      "timeout": 20,
+      "max_score": 3
+    }
+  ]
 }
