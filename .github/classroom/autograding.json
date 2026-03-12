@@ -1,45 +1,45 @@
 {
   "tests": [
     {
-      "name": "Conversions",
+      "name": "Conversions (12)",
       "id": "conv",
-      "command": "pytest -q tests/test_answers.py::test_conversions",
-      "timeout": 20,
+      "command": "python scripts/generate_questions.py --seed $GITHUB_ACTOR && pytest -q tests/test_answers.py::test_conversions",
+      "timeout": 30,
       "max_score": 12
     },
     {
-      "name": "Addition",
+      "name": "Addition (3)",
       "id": "add",
-      "command": "pytest -q tests/test_answers.py::test_addition",
-      "timeout": 20,
+      "command": "python scripts/generate_questions.py --seed $GITHUB_ACTOR && pytest -q tests/test_answers.py::test_addition",
+      "timeout": 30,
       "max_score": 3
     },
     {
-      "name": "Subtraction",
+      "name": "Subtraction (3)",
       "id": "sub",
-      "command": "pytest -q tests/test_answers.py::test_subtraction",
-      "timeout": 20,
+      "command": "python scripts/generate_questions.py --seed $GITHUB_ACTOR && pytest -q tests/test_answers.py::test_subtraction",
+      "timeout": 30,
       "max_score": 3
     },
     {
-      "name": "Twos Complement",
+      "name": "Two's (3)",
       "id": "two",
-      "command": "pytest -q tests/test_answers.py::test_twos",
-      "timeout": 20,
+      "command": "python scripts/generate_questions.py --seed $GITHUB_ACTOR && pytest -q tests/test_answers.py::test_twos",
+      "timeout": 30,
       "max_score": 3
     },
     {
-      "name": "Fixed Point",
-      "id": "fx",
-      "command": "pytest -q tests/test_answers.py::test_fixed",
-      "timeout": 20,
+      "name": "Fixed (3)",
+      "id": "fix",
+      "command": "python scripts/generate_questions.py --seed $GITHUB_ACTOR && pytest -q tests/test_answers.py::test_fixed",
+      "timeout": 30,
       "max_score": 3
     },
     {
-      "name": "Limits",
+      "name": "Limits (3)",
       "id": "lim",
-      "command": "pytest -q tests/test_answers.py::test_limits",
-      "timeout": 20,
+      "command": "python scripts/generate_questions.py --seed $GITHUB_ACTOR && pytest -q tests/test_answers.py::test_limits",
+      "timeout": 30,
       "max_score": 3
     }
   ]

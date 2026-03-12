@@ -1,8 +1,6 @@
 
 name: Autograding
-
 on: [push, pull_request]
-
 jobs:
   grade:
     runs-on: ubuntu-latest
@@ -11,6 +9,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install pytest
-      - run: pytest -q
-      - uses: education/autograding@v1
+      - name: Install pytest
+        run: pip install pytest
+      - name: Generate questions
+        run: python scripts/generate_questions.py --seed "${{ github.actor }}:${{ github.run_id }}"
+      - name: Run tests (full)
+        run: pytest -q
+      - name: Autograding Reporter
+        uses: education/autograding@v1
