@@ -1,10 +1,8 @@
-
 import re
 
 def norm(s):
-    # remove spaces, underscores, newlines and tabs; keep dots
-    return re.sub("[ _
-	]", "", str(s)).strip()
+    # Remove spaces, underscores, newlines, tabs
+    return re.sub("[ _\\n\\t]", "", str(s)).strip()
 
 def same_bits(exp, got):
     return norm(exp) == norm(got)
@@ -16,5 +14,5 @@ def same_oct(exp, got):
     return norm(exp) == norm(got)
 
 def check_fixed(exp, got):
-    # strict dotted format
+    # Strict dotted format for fixed point
     return norm(exp) == norm(got)

@@ -1,19 +1,17 @@
 
-# Digital Systems — Autograded (Randomised, Auto‑Computed Answers)
+# Digital Systems Autograding Repository
 
-This GitHub Classroom template generates **per‑student randomised questions** and auto‑computes the correct answers. Students fill `student/answers.json` using the generated `questions/generated.md`.
+This repository is designed for GitHub Classroom autograding.
 
-## How it works
-1. **Generation step** (CI): `python scripts/generate_questions.py --seed "${{ github.actor }}:${{ github.run_id }}"` creates:
-   - `meta/generated_spec.json` (random parameters)
-   - `questions/generated.md` (student‑readable questions)
-2. **Autograding tests** compute the expected answers from `generated_spec.json` and compare against `student/answers.json`.
-
-## Answer keys & integrity
-No static answer key is stored; expected values are computed in tests from the spec.
-
-## What students do
-- Edit **only** `student/answers.json` and push.
+Students complete: `student/answers.json`
 
 ## Scoring
-- 27 individual tests (1 point each): conversions (12), addition (3), subtraction (3), two’s complement (3), fixed‑point (3), limits (3).
+There are **27 individually graded questions**, each worth **1 point**.
+
+## Topics Covered
+- Base conversion
+- Binary addition
+- Binary subtraction
+- Two's complement
+- Fixed‑point representation (strict dotted format)
+- Representation limits
